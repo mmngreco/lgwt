@@ -19,10 +19,11 @@ func Sum(numbers []int) (total int) {
 // 	return sums
 // }
 
-func SumAll(numbersToSum ...[]int) (sums []int) {
+func SumAllTail(numbersToSum ...[]int) (sums []int) {
 
 	for _, numbers := range numbersToSum {
-		sums = append(sums, Sum(numbers))
+        tail := numbers[1:]
+		sums = append(sums, Sum(tail))
 	}
 	return sums
 }

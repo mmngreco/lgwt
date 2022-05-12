@@ -32,17 +32,12 @@ func TestSum(t *testing.T) {
 
 }
 
-func TestSumAll(t *testing.T) {
-
-	got := SumAll([]int{1, 2, 3}, []int{0, 9})
-	want := []int{6, 9}
-
-	// if got != want {
-	//     t.Errorf("got %v want %v", got, want)
-	// }
-	// better way to check slices
+func TestSumAllTail(t *testing.T) {
+	got := SumAllTail([]int{1, 2}, []int{0, 9})
+	want := []int{2, 9}
 
 	if !reflect.DeepEqual(got, want) {
 		t.Errorf("got %v want %v", got, want)
 	}
+
 }
